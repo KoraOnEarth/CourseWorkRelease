@@ -2,6 +2,7 @@
   <Header />
   <div class="mount">
     <div class="container">
+      <button @click="getUser">Тут какой-то текст для обращения к store</button>
       <p v-for="result in results">{{ result.title }}</p>
       <p v-for="result in results">{{ result.message }}</p>
       <p>{{ results.data }}</p>
@@ -37,6 +38,9 @@
       Footer,
     },
     methods: {
+      getUser(){
+        console.log(this.$store.getters.getUser);
+      }
     },
     mounted() {
       
